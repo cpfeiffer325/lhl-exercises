@@ -179,7 +179,7 @@ GEM
       railties (>= 4.2)
     websocket-driver (0.7.2)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
+    websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.3.0)
@@ -198,7 +198,6 @@ DEPENDENCIES
   selenium-webdriver
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
-  tzinfo-data
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
