@@ -1,6 +1,7 @@
 const { EXIT, KEY_LOOKUP } = require("./constants")
 
 let connection
+let lastKeyPressed
 
 const setupInput = (conn) => {
   connection = conn
@@ -20,7 +21,10 @@ const handleUserInput = (key) => {
     stdout.write(EXIT)
     process.exit()
   } else {
-    connection.write(KEY_LOOKUP[key])
+    clearInterval(lastKeyPressed)
+    lastKeyPressed = setInterval(() => {
+      connection.write(KEY_LOOKUP[key]);
+    }, 100)
   }
 }
 
