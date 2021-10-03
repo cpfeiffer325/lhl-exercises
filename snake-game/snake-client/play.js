@@ -1,5 +1,6 @@
 const { connect } = require("./client");
 const { setupInput } = require("./player-input");
+const { CONNECTING } = require("./constants")
 
-console.log("Connecting ...");
+console.log(CONNECTING);
 setupInput(connect());

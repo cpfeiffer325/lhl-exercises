@@ -1,3 +1,14 @@
+const {
+  BYE,
+  EXIT,
+  KEY_DOWN,
+  KEY_LEFT,
+  KEY_RIGHT,
+  KEY_UP,
+  LONGEST,
+  TAUNT
+} = require("./constants")
+
 let connection
 
 const setupInput = (conn) => {
@@ -16,28 +27,28 @@ const handleUserInput = (key) => {
 
   switch (key) {
     case '\u0003':
-      stdout.write("Exited snek game. Bye bye.\n")
+      stdout.write(EXIT)
       process.exit()
     case 'w':
-      connection.write("Move: up")
+      connection.write(KEY_UP)
       break
     case 'a':
-      connection.write("Move: left")
+      connection.write(KEY_LEFT)
       break
     case 's':
-      connection.write("Move: down")
+      connection.write(KEY_DOWN)
       break
     case 'd':
-      connection.write("Move: right")
+      connection.write(KEY_RIGHT)
       break
     case 'q':
-      connection.write("Say: You are going down")
+      connection.write(TAUNT)
       break
     case 'e':
-      connection.write("Say: I am the longest")
+      connection.write(LONGEST)
       break
     case 'f':
-      connection.write("Say: bye bye bye")
+      connection.write(BYE)
       break
   }
 }

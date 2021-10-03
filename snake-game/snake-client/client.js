@@ -1,6 +1,6 @@
-const { write } = require("fs");
-const net = require("net");
-const { IP, PORT } = require("./constants");
+const { write } = require("fs")
+const net = require("net")
+const { CONNECTED, IP, NAME, PORT } = require("./constants")
 
 // create connection with the game server
 const connect = function () {
@@ -17,12 +17,12 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    conn.write("Name: CLP")
+    conn.write(NAME)
     // setInterval( func = () => {
     //   conn.write("Move: up");
     // }, 1000);
 
-    console.log("You are Connected!")
+    console.log(CONNECTED)
   });
 
   return conn;
