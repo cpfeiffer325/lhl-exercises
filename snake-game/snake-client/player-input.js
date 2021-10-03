@@ -30,6 +30,15 @@ const handleUserInput = (key) => {
     case 'd':
       connection.write("Move: right")
       break
+    case 'q':
+      connection.write("Say: You are going down")
+      break
+    case 'e':
+      connection.write("Say: I am the longest")
+      break
+    case 'f':
+      connection.write("Say: bye bye bye")
+      break
   }
 }
 
