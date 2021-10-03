@@ -18,6 +18,10 @@ const connect = function () {
 
   conn.on("connect", () => {
     conn.write("Name: CLP")
+    // setInterval( func = () => {
+    //   conn.write("Move: up");
+    // }, 1000);
+
     console.log("You are Connected!")
   });
 
