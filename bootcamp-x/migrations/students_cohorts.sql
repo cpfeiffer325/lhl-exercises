@@ -6,7 +6,7 @@ CREATE TABLE cohorts (
 );
 
 CREATE TABLE students (
-  id SERIAL PRIMARY KEY,
+  id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(50) NOT NULL,
   age INTEGER,
   email VARCHAR(50),
